@@ -1,0 +1,36 @@
+.list-item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: roboto;
+  margin: 30px;
+}
+.des-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.time-text {
+  color: #475569;
+  font-size: 12px;
+}
+.logo {
+  width: 30px;
+  height: 30px;
+  margin: 20px;
+}
+.domain-title {
+  font-size: 20px;
+  color: #475569;
+  margin: 20px;
+}
+.domain-url {
+  color: #64748b;
+  font-size: 18px;
+  margin: 20px;
+}
+.delete-btn {
+  background-color: transparent;
+  border-width: 0px;
+}
