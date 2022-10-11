@@ -85,7 +85,7 @@ class App extends Component {
   state = {searchInput: '', historyList: initialHistoryList}
 
   onChangeSearchHistory = event => {
-    this.setState({historyList: event.target.value})
+    this.setState({searchInput: event.target.value})
   }
 
   deleteHistory = id => {
@@ -125,13 +125,17 @@ class App extends Component {
           </div>
         </div>
         <ul className="history-card">
-          {searchHistoryResults.map(eachResult => (
-            <SearchHistory
-              searchHistory={eachResult}
-              key={eachResult.id}
-              deleteHistory={this.deleteHistory}
-            />
-          ))}
+          {searchHistoryResults.length === 0 && (
+            <p className="empty-view">There is no history to show</p>
+          )}
+          {searchHistoryResults.length !== 0 &&
+            searchHistoryResults.map(eachResult => (
+              <SearchHistory
+                searchHistory={eachResult}
+                key={eachResult.id}
+                deleteHistory={this.deleteHistory}
+              />
+            ))}
         </ul>
       </div>
     )

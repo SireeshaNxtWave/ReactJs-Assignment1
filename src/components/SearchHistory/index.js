@@ -3,6 +3,7 @@ import './index.css'
 const SearchHistory = props => {
   const {searchHistory, deleteHistory} = props
   const {id, timeAccessed, logoUrl, title, domainUrl} = searchHistory
+  // const testid = 'delete'
 
   const onDelete = () => {
     deleteHistory(id)
@@ -17,7 +18,12 @@ const SearchHistory = props => {
         <p className="domain-url">{domainUrl}</p>
       </div>
 
-      <button onClick={onDelete} type="button" className="delete-btn">
+      <button
+        data-test-id="delete"
+        onClick={onDelete}
+        type="button"
+        className="delete-btn"
+      >
         <img
           src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
           alt="delete"
